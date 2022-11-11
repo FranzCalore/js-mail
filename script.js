@@ -1,0 +1,1 @@
+let emailAccettate = ["matteo@gmail.com", "fabio@gmail.com", "pietro@gmail.com", "anna@gmail.com"]
