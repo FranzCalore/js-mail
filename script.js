@@ -1,6 +1,7 @@
 let emailAccettate = ["matteo@gmail.com", "fabio@gmail.com", "pietro@gmail.com", "anna@gmail.com"];
 let emailDaVerificare = prompt("Inserisci la tua Email");
 let variabileDiControllo = false;
+let bottoneGiocoso = document.getElementById("giocoDellAnno")
 
 for (let i = 0; i < emailAccettate.length; i++){
     if (emailDaVerificare == emailAccettate[i]){
@@ -27,4 +28,22 @@ if (variabileDiControllo) {
 
 
     }
+};
+
+bottoneGiocoso.addEventListener("click", function(){
+
+let valoreUtente= Math.floor(Math.random() * (6-1))+1
+let valoreComputer= Math.floor(Math.random() * (6-1))+1
+
+console.log("Il computer ha tirato: " +valoreComputer)
+console.log("Tu hai tirato: "+valoreUtente)
+
+if (valoreUtente>valoreComputer){
+    console.log("Hai vinto, sei sicuro di non aver barato?")
 }
+else if (valoreComputer==valoreUtente){
+    console.log ("Non riesco a credere che abbiamo pareggiato...")
+}else {
+    console.log ("HO VINTO IO, STUPIDO UMANO!")
+}
+})
